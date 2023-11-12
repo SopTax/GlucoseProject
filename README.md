@@ -24,6 +24,22 @@ To run these scripts, you will need to have Python 3.6 or later installed along 
 - matplotlib
 - sklearn
 
+Before running the scripts, ensure that your dataset is located in the **'Ohio Data'** directory within the root of this project. If your data is in a different location, update the paths accordingly in the **data_processor_loader.py** script. The structure of the **'Ohio Data'** folder is as follows: 
+```bash
+Ohio Data/
+│
+├── Ohio2018_preprocessed/
+│   ├── train/
+│   │   ├── ...
+│   │
+│   └── test/
+│       ├── ...
+└── Ohio2020_preprocessed/
+    ├── train/
+    │   ├── ...
+    └── test/
+        ├── ...
+```
 ### Usage
 To run the experiment:
 1. Ensure that your data is placed in the appropriate directory specified in data_processor_loader.py.
