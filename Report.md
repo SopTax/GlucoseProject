@@ -26,7 +26,7 @@ In the final setting, the batch size was set to 500.
 
 ## 3. Results
 ### 3.1 Training and Validation Losses
-![Train and Test Loss](/Images/Loss.png "Train and Test Loss")
+![Train and Test Loss](/Images/Loss_Final.png "Train and Test Loss")
 
 ### 3.2 Prediction Performance
 Examples of prediction performance on 30 minute horizon.
@@ -41,12 +41,12 @@ Examples of prediction performance on 30 minute horizon.
 
 ### 3.3 Metrics
 
-'MSE': 835.6445 'MSE_se': 16.12349257951871
+'MSE': 616.1942 'MSE_se': 10.6529
 
-'RMSE': 20.997297 'RMSE_se': 0.10537991484177853 
+'RMSE': 17.661789 'RMSE_se': 0.0925 
 
-'MAE': 18.753304 'MAE_se': 0.09847658557383646
+'MAE': 15.9336 'MAE_se': 0.086
 
-'MARD': 0.12921967 'MARD_sd': 0.09847658557383646
+'MARD': 0.1055 'MARD_sd': 0.0861
 
 
