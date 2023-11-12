@@ -29,7 +29,24 @@ In the final setting, the batch size was set to 500.
 ![Train and Test Loss](/Images/Loss.png "Train and Test Loss")
 
 ### 3.2 Prediction Performance
-(Include visualizations of the model's predictions against the actual values and discuss the accuracy.)
+Examples of prediction performance on 30 minute horizon.
+<p float="left">
+  <img src="/Images/pr1.png" alt="Image 1" width="400" />
+  <img src="/Images/pr2.png" alt="Image 2" width="400" /> 
+</p>
+<p float="left">
+  <img src="/Images/pr3.png" alt="Image 3" width="400" />
+  <img src="/Images/pr4.png" alt="Image 4" width="400" /> 
+</p>
 
 ### 3.3 Metrics
-(Report the average metrics and standard error of the mean for model evaluation.)
+
+'MSE': 835.6445 'MSE_se': 16.12349257951871
+
+'RMSE': 20.997297 'RMSE_se': 0.10537991484177853 
+
+'MAE': 18.753304 'MAE_se': 0.09847658557383646
+
+'MARD': 0.12921967 'MARD_sd': 0.09847658557383646
+
+
