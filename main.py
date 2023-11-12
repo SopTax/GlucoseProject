@@ -5,7 +5,7 @@ from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 import numpy as np
 
 # Import necessary modules from other scripts
-from data_processor_loader import create_dataloader, preprocess, get_preprocessor, get_scaler
+from data_processor_loader import create_dataloader, preprocess, get_scaler
 from cnn_model import SimpleCNN
 from training_function import train, plot_losses
 
