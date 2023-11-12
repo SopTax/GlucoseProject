@@ -50,3 +50,8 @@ python main.py
 ```
 ### Visualization
 The main.py script will produce plots for the training and testing losses, as well as prediction visualizations and metrics after the training process.
+
+## Notebook
+Additionally, the Colab notebook  where the project was originally created and carried out is included. 
+Here some additional functions are included. The path needs to be adjust to run the notebook, to be the path to the directory with the Ohio Data folder.
+
