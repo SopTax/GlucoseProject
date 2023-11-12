@@ -190,27 +190,3 @@ def get_scaler(data_df):
     assert np.isnan(fill_values.values).sum() == 0, 'oh nooo'
 
     return scaler, fill_values
-
-
-def plot_seqs(sequence1, sequence2, sequence3):
-  # Replace these with your actual sequences
-
-
-  # Create a figure and a set of subplots
-  fig, axs = plt.subplots(3, 1, figsize=(10, 8))
-
-  # Plot each sequence in a separate subplot
-  axs[0].plot(sequence1)
-  axs[0].set_title('Sample 1')
-
-  axs[1].plot(sequence2)
-  axs[1].set_title('Sample 2')
-
-  axs[2].plot(sequence3)
-  axs[2].set_title('Sample 3')
-
-  # Adjust layout for better display
-  plt.tight_layout()
-
-  # Show the plot
-  plt.show()
