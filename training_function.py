@@ -4,6 +4,16 @@ from torch.utils.tensorboard import SummaryWriter
 import torch.optim as optim
 import matplotlib.pyplot as plt
 from data_processor_loader import create_dataloader
+import os
+path=os.getcwd()
+train_data_dirs = [
+    f"{path}/Ohio Data/Ohio2018_processed/train",
+    f"{path}/Ohio Data/Ohio2020_processed/train"
+]
+test_data_dirs = [
+    f"{path}/Ohio Data/Ohio2018_processed/test",
+    f"{path}/Ohio Data/Ohio2020_processed/test"
+]
 
 # Include the training function
 def train(
