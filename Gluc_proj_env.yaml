@@ -1,0 +1,11 @@
+name: Gluc_proj_env
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - scipy==1.11.3
+  - numpy==1.23.5
+  - pandas==1.5.3
+  - pytorch==2.1.0
+  - matplotlib==3.7.1
+  - scikit-learn==1.2.2
