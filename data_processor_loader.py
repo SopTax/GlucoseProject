@@ -53,7 +53,7 @@ class OhioT1DMDataset(Dataset):
         sequence = self.data[data_idx][index:index+self.seq_length]
         # Split the sequence into inputs and target
         inputs = sequence[:-1,:]  # All but the last element
-        target = sequence[-1,:]  # FIXME it was [-1, -1] before. # Only the last element
+        target = sequence[-1,:]  # Only the last element
 
         return inputs, target
 # Adjust the create_dataloader function to accept a list of directories
@@ -120,39 +120,14 @@ def preprocess(scaler, fill_values, data_df):
   print(fill_values.shape)
   print("## VALUES")
   print(values)
-
-  assert len(pd.isna(data_df2)) == 0, f'\n{data_df2[pd.isna(data_df2)]}\n{fill_values}'
   """
-  assert np.isnan(values).sum() == 0, 'nope'
+
 
   data_df2 = pd.DataFrame(values, columns=data_df1.columns)
   data_df2 = pd.DataFrame(scaler.transform(data_df2), columns=data_df2.columns)
 
   return data_df2
 
-
-def get_preprocessor(data_df):
-    # Remove any rows with missing values for cbg
-    data_df1=data_df
-    # TODO: where data_df1['missing_cbg'] == 1] replace column cbg with cubic spline interpolation
-
-    # put it in the end
-    cbg=data_df1.pop('cbg')
-    data_df1=data_df1.assign(cbg=cbg)
-
-    #Drop time
-    data_df1 = data_df1.drop(columns=['5minute_intervals_timestamp'])
-    # Calculate the minimum of each column
-    column_mins = data_df1.min()
-    # Subtract a small percentile of the minimum from the minimum
-    fill_values = column_mins - 0.01 * np.abs(column_mins)
-    # Fill missing values with the calculated values
-    data_df2 = data_df1.fillna(fill_values)
-    # Initialize a scaler, then apply it to the features
-    scaler = MinMaxScaler() #/ default=(0, 1)
-    scaler.fit(data_df2)
-
-    return scaler
 
 def get_scaler(data_df):
     data_df1 = data_df.copy()
