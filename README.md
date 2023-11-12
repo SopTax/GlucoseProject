@@ -20,10 +20,10 @@ Develop a patient-personalized forcasting model for blood glucose value.
 To run these scripts, you will need to have Python 3.6 or later installed along with the following packages:
 - pandas
 - numpy
-- torch
+- pytorch
 - matplotlib
 - sklearn
-
+The libraries versions for recreation of the environment are in the Gluc_proj_env.yaml file.
 Before running the scripts, ensure that your dataset is located in the **'Ohio Data'** directory within the root of this project. If your data is in a different location, update the paths accordingly in the **data_processor_loader.py** script. The structure of the **'Ohio Data'** folder is as follows: 
 ```bash
 Ohio Data/
