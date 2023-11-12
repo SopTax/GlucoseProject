@@ -6,7 +6,7 @@ import numpy as np
 
 # Import necessary modules from other scripts
 from data_processor_loader import create_dataloader, preprocess, get_scaler
-from cnn_model import SimpleCNN
+from lstm_model import SimpleLSTM
 from training_function import train, plot_losses
 
 def get_prediction_ahead(model: t.nn.Module, input_seq:t.Tensor, n_steps:int):
