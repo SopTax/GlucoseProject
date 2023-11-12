@@ -104,16 +104,16 @@ def compute_metrics(model: nn.Module):
     # Aggregate metrics
     metrics = {
         'MSE': np.mean(mse_values),
-        'MSE_sd': np.std(mse_values),
+        'MSE_se': np.std(mse_values, ddof=1) / np.sqrt(len(mse_values)),
         'RMSE': np.mean(rmse_values),
-        'RMSE_sd': np.std(rmse_values),
+        'RMSE_se': np.std(rmse_values, ddof=1) / np.sqrt(len(rmse_values)),
         'MAE': np.mean(mae_values),
-        'MAE_sd': np.std(mae_values),
+        'MAE_se': np.std(mae_values, ddof=1) / np.sqrt(len(mae_values)),
         #'R2': np.mean(r2_values),
         #'CC': np.mean(cc_values),
         #'FIT': np.mean(fit_values),
         'MARD': np.mean(mard_values),
-        'MARD_sd': np.std(mard_values),
+        'MARD_se': np.std(mae_values, ddof=1) / np.sqrt(len(mae_values)),
     }
 
     return metrics
