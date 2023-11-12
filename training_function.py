@@ -5,14 +5,23 @@ import torch.optim as optim
 import matplotlib.pyplot as plt
 
 # Include the training function
-def train(net_class, input_size, hidden_size, num_layers, output_size, lr=0.01, num_epochs=100, batch_size=256):
-    # ... [train function definition] ...
- train_dataloader = create_dataloader(
+def train(
+  net_class:type,
+  input_size:int,
+  hidden_size:int,
+  num_layers:int,
+  output_size:int,
+  lr:float = 0.01,
+  num_epochs:int=100,
+  batch_size:int=256
+):
+  # We use a default batch size of 64 as an example
+  train_dataloader = create_dataloader(
       data_dirs=train_data_dirs,
       seq_length=25,  # Example sequence length
       batch_size=batch_size
   )
- test_dataloader = create_dataloader(
+  test_dataloader = create_dataloader(
       data_dirs=train_data_dirs,
       seq_length=25,  # Example sequence length
       batch_size=batch_size
@@ -90,6 +99,8 @@ def train(net_class, input_size, hidden_size, num_layers, output_size, lr=0.01, 
 
   assert best_model_dict is not None
   model.load_state_dict(best_model_dict)
+
+  t.save(lstm_model.state_dict(), 'simple_lstm_model.pth')
 
   return train_losses, test_losses, model
 
