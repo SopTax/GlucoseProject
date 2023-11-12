@@ -1,4 +1,5 @@
 import torch.nn as nn
+import torch as t
 
 class SimpleLSTM(nn.Module):
     # ... [SimpleLSTM class definition] ...
