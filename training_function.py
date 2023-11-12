@@ -1,6 +1,6 @@
 import torch as t
 from torch import nn
-from torch.utils.tensorboard import SummaryWriter
+
 import torch.optim as optim
 import matplotlib.pyplot as plt
 from data_processor_loader import create_dataloader
@@ -94,9 +94,6 @@ def train(
       # Store the loss value
       train_losses.append(mean_train_loss.item())
       test_losses.append(mean_test_loss.item())
-
-      writer.add_scalar('train loss', mean_train_loss, epoch)
-      writer.add_scalar('test loss', mean_test_loss, epoch)
 
       current_validation_loss = mean_test_loss.item()
       if current_validation_loss < best_validation_loss:
