@@ -26,7 +26,7 @@ In the final setting, the batch size was set to 500.
 
 ## 3. Results
 ### 3.1 Training and Validation Losses
-(Show graphs of training and validation losses over the epochs to illustrate the learning process.)
+![Train and Test Loss](/Images/Loss.png "Train and Test Loss")
 
 ### 3.2 Prediction Performance
 (Include visualizations of the model's predictions against the actual values and discuss the accuracy.)
