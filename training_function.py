@@ -12,7 +12,7 @@ def train(net_class, input_size, hidden_size, num_layers, output_size, lr=0.01, 
       seq_length=25,  # Example sequence length
       batch_size=batch_size
   )
-  test_dataloader = create_dataloader(
+ test_dataloader = create_dataloader(
       data_dirs=train_data_dirs,
       seq_length=25,  # Example sequence length
       batch_size=batch_size
